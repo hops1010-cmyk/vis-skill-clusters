@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A curated table of Vistamations and Tower skill clusters.">
+  <title>Vistamations Skill Clusters</title>
+  <style>
+    :root { color-scheme: dark; font: 16px/1.55 system-ui, sans-serif; background: #0b1018; color: #e8edf2; }
+    * { box-sizing: border-box; }
+    body { margin: 0 auto; max-width: 1180px; padding: 32px 20px 60px; }
+    header { border-bottom: 2px solid #39ff14; padding-bottom: 20px; margin-bottom: 24px; }
+    h1, h2 { color: #39ff14; line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 8px; }
+    p { max-width: 78ch; }
+    a { color: #7bdeff; }
+    .meta { color: #aebdca; font-size: .92rem; }
+    label { display: block; font-weight: 650; margin: 22px 0 6px; }
+    input { width: 100%; padding: 11px 12px; border-radius: 6px; border: 1px solid #547084; background: #131d29; color: inherit; font: inherit; }
+    .table-wrap { overflow-x: auto; border: 1px solid #284052; border-radius: 8px; }
+    table { border-collapse: collapse; width: 100%; min-width: 720px; }
+    caption { text-align: left; padding: 12px 14px; color: #aebdca; }
+    th, td { text-align: left; vertical-align: top; padding: 13px 14px; border-top: 1px solid #284052; }
+    th { color: #00d2ff; background: #111a25; position: sticky; top: 0; }
+    tbody tr:hover { background: #111a25; }
+    td:first-child { min-width: 220px; font-weight: 700; color: #fff; }
+    code { color: #b8f5d0; font-size: .92em; }
+    .note { margin-top: 24px; border-left: 3px solid #00d2ff; padding: 8px 14px; background: #101923; }
+    [hidden] { display: none !important; }
+    @media (max-width: 650px) { body { padding: 22px 12px 40px; } th, td { padding: 10px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vistamations Skill Clusters</h1>
+    <p>A working map of related skills used across Tower work. The examples are representative, not a complete list of every installed skill.</p>
+    <p class="meta">Catalog status: initial taxonomy proposal · Inventory baseline: 2026-11-02</p>
+  </header>
+
+  <main>
+    <h2>Cluster catalog</h2>
+    <label for="filter">Filter clusters, purposes, or example skills</label>
+    <input id="filter" type="search" placeholder="For example: base model, GitHub, Cloudflare" autocomplete="off">
+    <p id="result" class="meta" aria-live="polite">12 clusters</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Suggested primary groupings for the public skill catalog.</caption>
+        <thead><tr><th scope="col">Cluster</th><th scope="col">Purpose</th><th scope="col">Representative skills</th></tr></thead>
+        <tbody id="clusters">
+          <tr><td>Hermes and agent orchestration</td><td>Profile, agent, tool, and multi-agent workflows.</td><td><code>hermes-agent</code>, <code>hermes-agent-skill-authoring</code>, <code>sdlc-review</code></td></tr>
+          <tr><td>Cloudflare, edge and deployment</td><td>Workers, edge services, deployment, and platform operations.</td><td><code>cloudflare</code>, <code>wrangler</code>, <code>agents-sdk</code>, <code>durable-objects</code>, <code>turnstile-spin</code></td></tr>
+          <tr><td>Tower and Vistamations operations</td><td>Local services, Tower operations, troubleshooting, and project protocol.</td><td><code>tower-stack-ops</code>, <code>tower-build-production-line-protocol</code>, <code>service-port-map</code>, <code>vistamations-file-placement</code></td></tr>
+          <tr><td>Frontend and web UI</td><td>Web application layout, design systems, animation, and performance.</td><td><code>vistamations-frontend</code>, <code>popular-web-designs</code>, <code>web-animation-films</code>, <code>web-perf</code></td></tr>
+          <tr><td>Media and creative production</td><td>Image, motion, video, audio, and creative content workflows.</td><td><code>p5js</code>, <code>manim-video</code>, <code>ascii-video</code>, <code>songwriting-and-ai-music</code></td></tr>
+          <tr><td>Productivity and documents</td><td>Office documents, email, calendars, and everyday knowledge work.</td><td><code>google-workspace</code>, <code>docx</code>, <code>pdf</code>, <code>xlsx</code>, <code>email-inbox-triage</code></td></tr>
+          <tr><td>Software engineering</td><td>Code navigation, debugging, testing, review, and Git craft.</td><td><code>git-skill-cluster</code>, <code>systematic-debugging</code>, <code>test-driven-development</code>, <code>requesting-code-review</code></td></tr>
+          <tr><td>Research and knowledge</td><td>Evidence gathering, literature search, structured notes, and research capture.</td><td><code>arxiv</code>, <code>grounded-citations</code>, <code>llm-wiki</code>, <code>competitor-news-monitor</code></td></tr>
+          <tr><td>Store and commerce</td><td>Store content, product delivery, commerce architecture, and customer-facing offers.</td><td><code>store-content-ingest</code>, <code>store-data-flow-assessment</code>, <code>store-commercial-writing</code>, <code>digital-product-delivery</code></td></tr>
+          <tr><td>System architecture</td><td>Service boundaries, identity, system diagrams, and infrastructure relationships.</td><td><code>identity-architecture</code>, <code>architecture-diagram</code>, <code>system-gates</code>, <code>server-mesh</code></td></tr>
+          <tr><td>Base model</td><td>Reusable Tower interface and wizard patterns that provide a shared starting point.</td><td><code>tower-base-model</code>, <code>vistamations-base-model</code>, <code>base-model-build</code></td></tr>
+          <tr><td>GitHub document repo</td><td>Versioned, reviewable documentation projects organized around a repository.</td><td><code>github</code>, <code>guides-pipeline</code>, <code>docx</code>, <code>pdf</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">This taxonomy is a navigation aid, not a claim that each skill belongs to only one domain. The next inventory pass should assign each skill one primary cluster and optional cross-cutting tags. See <a href="report.md">the report</a> for the inventory basis and decisions.</p>
+  </main>
+  <script>
+    const filter = document.getElementById('filter');
+    const rows = [...document.querySelectorAll('#clusters tr')];
+    const result = document.getElementById('result');
+    filter.addEventListener('input', () => {
+      const q = filter.value.trim().toLowerCase();
+      let shown = 0;
+      for (const row of rows) {
+        const match = row.textContent.toLowerCase().includes(q);
+        row.hidden = !match;
+        if (match) shown++;
+      }
+      result.textContent = `${shown} of ${rows.length} clusters`;
+    });
+  </script>
+</body>
+</html>
